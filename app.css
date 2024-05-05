@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: #808080; /* Grey background */
+}
+
+h1 {
+    color: #ff6600; /* Orange color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for depth */
+    font-size: 36px; /* Adjust font size */
+    font-weight: bold; /* Make the text bold */
+    margin-bottom: 20px; /* Add some bottom margin for spacing */
+}
+
+.board-container {
+    margin: auto;
+}
+
+.cell {
+    border: solid 1px;
+    border-color: #ffffff; /* White cell borders */
+    background-color: #ffffff; /* White cell background */
+    font-size: 40px;
+    width: 60px;
+    height: 60px;
+}
+
+.hover {
+    display: none;
+}
+
+.monitor {
+    background-color: #28a745; /* Green background */
+    color: #ffffff; /* White text */
+    padding: 10px;
+    font-size: 20px;
+    width: 100px;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+.safe-click {
+    background-color: #007bff; /* Blue background */
+    color: #ffffff; /* White text */
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.safe-click:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.undo {
+    background-color: #ff7f0e; /* Orange background */
+    color: #ffffff; /* White text */
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.undo:hover {
+    background-color: #d65c04; /* Darker orange on hover */
+}
+
+.smiley {
+    background-image: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red); /* Rainbow gradient background */
+    color: #ffffff; /* White text */
+    padding: 10px 20px; /* Add padding for better appearance */
+    font-size: 16px; /* Adjust font size */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add border radius */
+    cursor: pointer; /* Add cursor pointer */
+    outline: none; /* Remove default button outline */
+    transition: background-color 0.3s; /* Add transition effect */
+}
+
+.smiley:hover {
+    filter: brightness(110%); /* Increase brightness on hover */
+}
