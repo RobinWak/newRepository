@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mine Sweeper </title>
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body onload="onInit()">
+    <h1>Mine Sweeper </h1>
+    <button class="smiley" onclick="onInit()">😃</button> <!-- Smiley button -->
+    <button class="safe-click" onclick="useSafeClick()">Safe Clicks: <span id="safe-click-count">3</span></button> <!-- Safe-Click button -->
+    <button class="undo" onclick="undoMove()">Undo</button> <!-- Undo button -->
+    <table class="board-container">
+        <tbody class="board" onmouseenter="expose()"></tbody>
+    </table>
+    <div class="monitor">Lives: <span class="lives">3</span></div>
+    <script src="js/utils.js"></script>
+    <script src="js/game.js"></script>
+
+</body>
+
+</html>
