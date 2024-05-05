@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      background-position: 50%;
+      background-repeat: no-repeat;
+      background-size: 50%;
+      background-color:rgb(248, 246, 246);
+    }
+    
+    h1{
+      text-align: center;
+    }
+    body{
+      text-align: center;
+      
+     
+    }
+    .board-container {
+      margin: auto;
+    }
+    
+    .cell {
+      border: solid 1px;
+      border-color: rgb(12, 12, 12);
+      font-size: 40px;
+      width: 60px;
+      height: 60px;
+    }
+    
+    .hover{
+      display: none;
+    }
+    .monitor {
+        margin-bottom: 20px;
+    }
