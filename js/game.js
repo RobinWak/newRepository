@@ -187,13 +187,30 @@ function getCellCoords(cell) {
     return { row: +coords[1], col: +coords[2] };
 }
 
+// Check if all cells on the board are either shown or marked
+function checkBoardFull(board) {
+    for (let i = 0; i < board.length; i++) {
+        for (let j = 0; j < board[i].length; j++) {
+            const cell = board[i][j];
+            if (!cell.isShown && !cell.isMarked) {
+                return false; // If any cell is not shown or marked, return false
+            }
+        }
+    }
+    return true; // If all cells are shown or marked, return true
+}
+
+
 // Check if the game is won
 function checkGameWin() {
     if (checkBoardFull(gBoard)) {
         console.log('WIN: Congratulations! You won the game!');
+        alert('Congratulations! You won the game!'); // Display an alert to notify the user
+        // You can also modify this to display a message on the page instead of using alert
         // Additional logic for winning the game can be added here
     }
 }
+
 
 // Reveal all mines when the game is lost
 function revealAllMines() {

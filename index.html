@@ -11,13 +11,16 @@
 
 <body onload="onInit()">
     <h1>Mine Sweeper </h1>
-    <button class="smiley" onclick="onInit()">😃</button> <!-- Smiley button -->
-    <button class="safe-click" onclick="useSafeClick()">Safe Clicks: <span id="safe-click-count">3</span></button> <!-- Safe-Click button -->
+    <button class="smiley" onclick="onInit()">restart 😃</button> <!-- Smiley button -->
+    <button class="safe-click" onclick="useSafeClick()">Safe Clicks</button> <!-- Safe-Click button -->
     <button class="undo" onclick="undoMove()">Undo</button> <!-- Undo button -->
+   <br>
+   <br>
     <table class="board-container">
         <tbody class="board" onmouseenter="expose()"></tbody>
     </table>
-    <div class="monitor">Lives: <span class="lives">3</span></div>
+    <br>
+    <div class="monitor">❤ <span class="lives">3</span></div>
     <script src="js/utils.js"></script>
     <script src="js/game.js"></script>
 
