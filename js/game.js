@@ -187,6 +187,50 @@ function getCellCoords(cell) {
     return { row: +coords[1], col: +coords[2] };
 }
 
+// Handle mine click
+function handleMineClick(cell) {
+    gLives--;
+    cell.clickCount++; // Increment click count for this mine cell
+    if (gLives === 0) {
+        console.log('GAME OVER: You lost all your lives!');
+        revealAllMines();
+        setTimeout(onInit, 2000); // Restart the game after 2 seconds
+    } else if (cell.clickCount === 3) {
+        console.log('Mine exploded!');
+        revealAllMinesForTime(1500); // Show all mines for 1.5 seconds
+        setTimeout(function () {
+            cell.isShown = true; // Show the mine cell after 1.5 seconds
+            renderBoard(gBoard);
+        }, 1500);
+    } else {
+        renderLives();
+        console.log(`Oops! You clicked on a mine. Lives left: ${gLives}`);
+    }
+}
+
+// Reveal all mines for a specific duration
+function revealAllMinesForTime(duration) {
+    for (let i = 0; i < gBoard.length; i++) {
+        for (let j = 0; j < gBoard[i].length; j++) {
+            if (gBoard[i][j].isMine) {
+                gBoard[i][j].isShown = true;
+            }
+        }
+    }
+    renderBoard(gBoard);
+    setTimeout(function () {
+        for (let i = 0; i < gBoard.length; i++) {
+            for (let j = 0; j < gBoard[i].length; j++) {
+                if (gBoard[i][j].isMine) {
+                    gBoard[i][j].isShown = false;
+                }
+            }
+        }
+        renderBoard(gBoard);
+    }, duration);
+}
+
+
 // Check if all cells on the board are either shown or marked
 function checkBoardFull(board) {
     for (let i = 0; i < board.length; i++) {
@@ -274,4 +318,9 @@ function undoMove() {
         gBoard = JSON.parse(prevState); // Restore previous state
         renderBoard(gBoard); // Render the board
     }
+}
+// Toggle Dark Mode
+function toggleDarkMode() {
+    const body = document.body;
+    body.classList.toggle('dark-mode');
 }
