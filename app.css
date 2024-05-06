@@ -90,3 +90,29 @@ h1 {
 .smiley:hover {
     filter: brightness(110%); /* Increase brightness on hover */
 }
+
+.dark-mode {
+    background-color: #222;
+    color: #fff;
+}
+
+.dark-mode .board td {
+    border-color: #888;
+}
+.dark-mode-button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+}
+
+.dark-mode-button:hover {
+    background-color: #222;
+}
+
+.dark-mode-button:focus {
+    outline: none;
+}
