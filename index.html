@@ -11,6 +11,11 @@
 
 <body onload="onInit()">
     <h1>Mine Sweeper </h1>
+    <div class="levels">
+        <button onclick="startGame('beginner')">Beginner</button>
+        <button onclick="startGame('medium')">Medium</button>
+        <button onclick="startGame('expert')">Expert</button>
+    </div>
     <button class="smiley" onclick="onInit()">restart 😃</button> <!-- Smiley button -->
     <button class="safe-click" onclick="useSafeClick()">Safe Clicks</button> <!-- Safe-Click button -->
     <button class="undo" onclick="undoMove()">Undo</button> <!-- Undo button -->
@@ -23,6 +28,7 @@
     <div class="monitor">❤ <span class="lives">3</span></div>
     <br>
     <button class="dark-mode-button" onclick="toggleDarkMode()">Dark Mode</button>
+    <img src="img.png" alt="Background Image" class="bg-image">
     <script src="js/utils.js"></script>
     <script src="js/game.js"></script>
 
